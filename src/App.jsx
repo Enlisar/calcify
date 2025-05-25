@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import Calc from "./Calculator.jsx";
+import Calc from "./Calc.jsx";
 import Menu from "./Menu.jsx";
 
 const App = () => {
