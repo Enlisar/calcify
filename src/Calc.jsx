@@ -3,7 +3,8 @@ import { DivideIcon } from "@heroicons/react/24/outline";
 
 const CaclHandler = (value) => {
   let disp = document.querySelector(".disp");
-  let last = String(disp.innerText);
+  let display = String(disp.innerText);
+  let l = display.length;
   if (Number.isInteger(value)) {
     disp.innerText += value;
   } else if (
@@ -12,35 +13,37 @@ const CaclHandler = (value) => {
       value == "*" ||
       value == "/" ||
       value == ".") &&
-    last.endsWith("+") == false &&
-    last.endsWith("-") == false &&
-    last.endsWith("/") == false &&
-    last.endsWith("*") == false &&
-    last.endsWith("(") == false &&
-    last.endsWith(".") == false
+    display.endsWith("+") == false &&
+    display.endsWith("-") == false &&
+    display.endsWith("/") == false &&
+    display.endsWith("*") == false &&
+    display.endsWith("(") == false &&
+    display.endsWith(".") == false
   ) {
     disp.innerText += value;
   } else if (value == "C") {
     disp.innerText = " ";
   } else if (
     value == "(" &&
-    (last.endsWith("+") ||
-      last.endsWith("-") ||
-      last.endsWith("*") ||
-      last.endsWith("/"))
+    (display.endsWith("+") ||
+      display.endsWith("-") ||
+      display.endsWith("*") ||
+      display.endsWith("/"))
   ) {
     disp.innerText += value;
   } else if (
     value == ")" &&
-    last.endsWith("+") == false &&
-    last.endsWith("-") == false &&
-    last.endsWith("/") == false &&
-    last.endsWith("*") == false &&
-    last.endsWith("(") == false &&
-    last.endsWith(".") == false
+    display.endsWith("+") == false &&
+    display.endsWith("-") == false &&
+    display.endsWith("/") == false &&
+    display.endsWith("*") == false &&
+    display.endsWith("(") == false &&
+    display.endsWith(".") == false
   ) {
     disp.innerText += value;
   } else if (value == "delete") {
+    let newDisplay = display.slice(0, l - 1);
+    disp.innerText = newDisplay;
   }
 };
 
