@@ -1,21 +1,26 @@
-# React Calculator App
+Calcify – React Calculator App
 
-This is a basic calculator app made using **React** and **Tailwind CSS**.  
-It's my **first project using React** as well as **my first time using Tailwind CSS**.
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-363BFF?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-0F172A?style=for-the-badge&logo=tailwind-css&logoColor=38BDF8)
+![Heroicons](https://img.shields.io/badge/Heroicons-0F172A?style=for-the-badge&logo=heroicons&logoColor=FFFFFF)
 
-## 🔧 Tech Used
+Calcify is a basic calculator app built using React and Tailwind CSS.
+It’s my first project using React, as well as my first time working with Tailwind CSS.
 
-- React
-- Vite
-- Tailwind CSS
-- Heroicons
+🔧 Tech Stack
 
-## ✨ Features
+- ⚛️ React
+- ⚡ Vite
+- 🎨 Tailwind CSS
+- 🔔 Heroicons
+
+✨ Features
 
 - Basic calculator layout
-- Smooth button animations
-- Clean and aesthetic design
+- Responsive design
+- Smooth button animations on click
+- Clean and aesthetic interface
 
-## 📌 Note
-
-This project was built to help me learn React and Tailwind. More features will be added soon!
+This project is part of my learning journey in web development.
+I’ll continue to expand Calcify with more tools and functionality as I learn and grow.
