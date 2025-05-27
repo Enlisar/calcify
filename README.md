@@ -1,4 +1,4 @@
-Calcify – React Calculator App
+Calcify – Multi Calculator App
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-363BFF?style=for-the-badge&logo=vite&logoColor=FFD62E)
