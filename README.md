@@ -1,7 +1,6 @@
 Calcify – React Calculator App
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Vite](https://img.shields.io/badge/Vite-363BFF?style=for-the-badge&logo=vite&logoColor=FFD62E)
 ![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-0F172A?style=for-the-badge&logo=tailwind-css&logoColor=38BDF8)
 ![Heroicons](https://img.shields.io/badge/Heroicons-0F172A?style=for-the-badge&logo=heroicons&logoColor=FFFFFF)
 
@@ -11,7 +10,6 @@ It’s my first project using React, as well as my first time working with Tailw
 🔧 Tech Stack
 
 - ⚛️ React
-- ⚡ Vite
 - 🎨 Tailwind CSS
 - 🔔 Heroicons
 
