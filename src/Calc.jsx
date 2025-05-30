@@ -1,14 +1,12 @@
 import { BackspaceIcon } from "@heroicons/react/24/outline";
 import { DivideIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import { evaluate } from "mathjs";
 
 const Calc = () => {
   const [display, setDisplay] = useState(" ");
   const CaclHandler = (value) => {
-    // let disp = document.querySelector(".disp");
-    // let display = String(disp.innerText);
-    // let l = display.length;
-    if (Number.isInteger(value)) {
+    if (Number.isInteger(value) && display.endsWith(")") == false) {
       setDisplay(display + value);
     } else if (
       (value == "+" ||
@@ -46,6 +44,9 @@ const Calc = () => {
       setDisplay(display + value);
     } else if (value == "delete") {
       setDisplay(display.slice(0, -1));
+    } else if (value == "=") {
+      let result = evaluate(display);
+      setDisplay(result.toString());
     }
   };
   const Key = ({ operator }) => {
