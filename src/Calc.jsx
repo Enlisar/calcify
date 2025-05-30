@@ -7,7 +7,7 @@ const Calc = () => {
   const [display, setDisplay] = useState(" ");
   const CaclHandler = (value) => {
     if (Number.isInteger(value) && display.endsWith(")") == false) {
-      setDisplay(display + value);
+      setDisplay((d) => d + value);
     } else if (
       (value == "+" ||
         value == "-" ||
@@ -21,7 +21,7 @@ const Calc = () => {
       display.endsWith("(") == false &&
       display.endsWith(".") == false
     ) {
-      setDisplay(display + value);
+      setDisplay((d) => d + value);
     } else if (value == "C") {
       setDisplay("");
     } else if (
@@ -31,7 +31,7 @@ const Calc = () => {
         display.endsWith("*") ||
         display.endsWith("/"))
     ) {
-      setDisplay(display + value);
+      setDisplay((d) => d + value);
     } else if (
       value == ")" &&
       display.endsWith("+") == false &&
@@ -41,9 +41,9 @@ const Calc = () => {
       display.endsWith("(") == false &&
       display.endsWith(".") == false
     ) {
-      setDisplay(display + value);
+      setDisplay((d) => d + value);
     } else if (value == "delete") {
-      setDisplay(display.slice(0, -1));
+      setDisplay((display) => display.slice(0, -1));
     } else if (value == "=") {
       let result = evaluate(display);
       setDisplay(result.toString());
