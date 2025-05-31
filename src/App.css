@@ -1,0 +1,7 @@
+html {
+  scrollbar-gutter: auto !important;
+}
+
+html:has(body.content-overflow-y) {
+  scrollbar-gutter: stable !important;
+}
