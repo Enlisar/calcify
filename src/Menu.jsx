@@ -1,5 +1,4 @@
 import { Bars3Icon } from "@heroicons/react/24/solid";
-import { useState } from "react";
 import { FaCalculator } from "react-icons/fa";
 import { FaMoneyBillAlt } from "react-icons/fa";
 import { FaBalanceScale } from "react-icons/fa";
@@ -7,9 +6,6 @@ import { MdDiscount } from "react-icons/md";
 import { LuTriangleRight } from "react-icons/lu";
 
 const Menu = () => {
-  const [calculator, setCalculator] = useState("Calculator");
-  const changeCalculator = (value, event) => {};
-
   return (
     <div className="h-20 ml-2 w-full bg-none relative self-start text-left p-2">
       <div className="drawer drawer-auto-gutter hover:cursor-default">
@@ -28,7 +24,7 @@ const Menu = () => {
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-          <ul className="menu bg-[#805d2d] z-50 shadow-md text-sm font-mono text-base-content min-h-full w-80 p-4">
+          <ul className="menu [&_li>*:not(ul):not(.menu-title):not(details):active]:bg-[#654a24] bg-[#805d2d] z-50 shadow-md text-sm font-mono text-base-content min-h-full w-80 p-4">
             <a href="#" className=" mb-4">
               <img
                 src="./src/assets/logo.png"
@@ -37,51 +33,31 @@ const Menu = () => {
               />
             </a>
             <li>
-              <a
-                href="#"
-                className="hover:underline"
-                onClick={(e) => changeCalculator("Calculator", e)}
-              >
+              <a href="#" className="hover:underline">
                 <FaCalculator />
                 Calculator
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="hover:underline"
-                onClick={(e) => changeCalculator("Currency Converter", e)}
-              >
+              <a href="#" className="hover:underline active:bg-[#654a24]">
                 <FaMoneyBillAlt />
                 Currency Converter
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="hover:underline"
-                onClick={(e) => changeCalculator("Unit Converter", e)}
-              >
+              <a href="#" className="hover:underline">
                 <FaBalanceScale />
                 Unit Converter
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="hover:underline"
-                onClick={(e) => changeCalculator("Discount Calculator", e)}
-              >
+              <a href="#" className="hover:underline">
                 <MdDiscount />
                 Discount Calculator
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="hover:underline"
-                onClick={(e) => changeCalculator("Trigonometric Functions", e)}
-              >
+              <a href="#" className="hover:underline">
                 <LuTriangleRight />
                 Trigonometric Functions
               </a>
