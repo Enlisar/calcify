@@ -33,13 +33,35 @@ const Menu = () => {
               />
             </a>
             <li>
+              <select name="theme" className="bg-[#805d2d]">
+                <option
+                  value="Dark"
+                  className="bg-[#805d2d] hover:bg-[#654a24]"
+                >
+                  Wooden
+                </option>
+                <option
+                  value="Dark"
+                  className="bg-[#805d2d] hover:bg-[#654a24]"
+                >
+                  Light
+                </option>
+                <option
+                  value="Dark"
+                  className="bg-[#805d2d] hover:bg-[#654a24]"
+                >
+                  Dark
+                </option>
+              </select>
+            </li>
+            <li>
               <a href="#" className="hover:underline">
                 <FaCalculator />
                 Calculator
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline active:bg-[#654a24]">
+              <a href="#" className="hover:underline">
                 <FaMoneyBillAlt />
                 Currency Converter
               </a>

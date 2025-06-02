@@ -80,7 +80,7 @@ const Calc = () => {
     );
   };
   return (
-    <div className="absolute w-[30vw] h-100 p-2 pb-3 bg-[url(E:\Coding\Js\React\calculator\src\assets\bg.jpg)] rounded-md border-[0.7vw] border-[#805d2d]">
+    <div className="absolute w-[30vw] h-100 p-2 pb-3 bg-[url(E:\Coding\Js\React\calculator\src\assets\calcBg.jpg)] rounded-md border-[0.7vw] border-[#805d2d]">
       <div className="disp w-[98%] h-[8vw] bg-[#e0d3c5] mt-2 mb-2 rounded border-[0.7vw] border-[#805d2d] flex justify-end items-center text-[#805d2d] text-[2.5vw]">
         {display}
       </div>
