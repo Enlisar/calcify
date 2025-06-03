@@ -1,3 +1,7 @@
+@plugin "daisyui" {
+  themes: all;
+}
+
 html {
   scrollbar-gutter: auto !important;
 }

@@ -32,28 +32,41 @@ const Menu = () => {
                 className="h-[70px] w-[200px]"
               />
             </a>
-            <li>
-              <select name="theme" className="bg-[#805d2d]">
-                <option
-                  value="Dark"
-                  className="bg-[#805d2d] hover:bg-[#654a24]"
-                >
-                  Wooden
-                </option>
-                <option
-                  value="Dark"
-                  className="bg-[#805d2d] hover:bg-[#654a24]"
-                >
-                  Light
-                </option>
-                <option
-                  value="Dark"
-                  className="bg-[#805d2d] hover:bg-[#654a24]"
-                >
-                  Dark
-                </option>
-              </select>
-            </li>
+            <div className="collapse collapse-arrow bg-[#805d2d]">
+              <input type="checkbox" />
+              <div className="collapse-title font-semibold">Theme</div>
+              <div className="collapse-content text-sm">
+                <fieldset className="fieldset">
+                  <label className="flex gap-2 cursor-pointer items-center">
+                    <input
+                      type="radio"
+                      name="theme-radios"
+                      className="radio radio-sm theme-controller"
+                      value="default"
+                    />
+                    Wooden
+                  </label>
+                  <label className="flex gap-2 cursor-pointer items-center">
+                    <input
+                      type="radio"
+                      name="theme-radios"
+                      className="radio radio-sm theme-controller"
+                      value="retro"
+                    />
+                    Light
+                  </label>
+                  <label className="flex gap-2 cursor-pointer items-center">
+                    <input
+                      type="radio"
+                      name="theme-radios"
+                      className="radio radio-sm theme-controller"
+                      value="cyberpunk"
+                    />
+                    Dark
+                  </label>
+                </fieldset>
+              </div>
+            </div>
             <li>
               <a href="#" className="hover:underline">
                 <FaCalculator />
