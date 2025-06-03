@@ -4,8 +4,15 @@ import { FaMoneyBillAlt } from "react-icons/fa";
 import { FaBalanceScale } from "react-icons/fa";
 import { MdDiscount } from "react-icons/md";
 import { LuTriangleRight } from "react-icons/lu";
+import { useState } from "react";
 
 const Menu = () => {
+  const [theme, setTheme] = useState("Wooden");
+
+  const themeSelector = (eve) => {
+    let currentTheme = eve.target.value;
+    setTheme(currentTheme);
+  };
   return (
     <div className="h-20 ml-2 w-full bg-none relative self-start text-left p-2">
       <div className="drawer drawer-auto-gutter hover:cursor-default">
@@ -34,7 +41,9 @@ const Menu = () => {
             </a>
             <div className="collapse collapse-arrow bg-[#805d2d]">
               <input type="checkbox" />
-              <div className="collapse-title font-semibold">Theme</div>
+              <div className="collapse-title font-semibold">
+                <p>Theme: {theme}</p>
+              </div>
               <div className="collapse-content text-sm">
                 <fieldset className="fieldset">
                   <label className="flex gap-2 cursor-pointer items-center">
@@ -42,7 +51,8 @@ const Menu = () => {
                       type="radio"
                       name="theme-radios"
                       className="radio radio-sm theme-controller"
-                      value="default"
+                      value="Wooden"
+                      onClick={(e) => themeSelector(e)}
                     />
                     Wooden
                   </label>
@@ -51,7 +61,8 @@ const Menu = () => {
                       type="radio"
                       name="theme-radios"
                       className="radio radio-sm theme-controller"
-                      value="retro"
+                      value="Light"
+                      onClick={(e) => themeSelector(e)}
                     />
                     Light
                   </label>
@@ -60,7 +71,8 @@ const Menu = () => {
                       type="radio"
                       name="theme-radios"
                       className="radio radio-sm theme-controller"
-                      value="cyberpunk"
+                      value="Dark"
+                      onClick={(e) => themeSelector(e)}
                     />
                     Dark
                   </label>
