@@ -12,6 +12,7 @@ It’s my first project using React, as well as my first time working with Tailw
 - ⚛️ React
 - 🎨 Tailwind CSS
 - 🔔 Heroicons
+- 🌼 Daisy UI
 
 ✨ Features
 
