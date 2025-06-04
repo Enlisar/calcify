@@ -9,37 +9,25 @@ const Calc = () => {
     if (Number.isInteger(value) && display.endsWith(")") == false) {
       setDisplay((d) => d + value);
     } else if (
-      (value == "+" ||
-        value == "-" ||
-        value == "*" ||
-        value == "/" ||
-        value == ".") &&
-      display.endsWith("+") == false &&
-      display.endsWith("-") == false &&
-      display.endsWith("/") == false &&
-      display.endsWith("*") == false &&
-      display.endsWith("(") == false &&
-      display.endsWith(".") == false
+      ["+", "-", "*", "/"].includes(value) &&
+      ["+", "-", "*", "/"].includes(display.slice(-1))
+    ) {
+      setDisplay((d) => d.slice(0, -1) + value);
+    } else if (
+      ["+", "-", "*", "/", "."].includes(value) &&
+      !["+", "-", "*", "/", "(", "."].includes(display.slice(-1))
     ) {
       setDisplay((d) => d + value);
     } else if (value == "C") {
       setDisplay("");
     } else if (
       value == "(" &&
-      (display.endsWith("+") ||
-        display.endsWith("-") ||
-        display.endsWith("*") ||
-        display.endsWith("/"))
+      ["+", "-", "*", "/"].includes(display.slice(-1))
     ) {
       setDisplay((d) => d + value);
     } else if (
       value == ")" &&
-      display.endsWith("+") == false &&
-      display.endsWith("-") == false &&
-      display.endsWith("/") == false &&
-      display.endsWith("*") == false &&
-      display.endsWith("(") == false &&
-      display.endsWith(".") == false
+      !["+", "-", "/", "*", "(", "."].includes(display.slice(-1))
     ) {
       setDisplay((d) => d + value);
     } else if (value == "delete") {
@@ -79,7 +67,7 @@ const Calc = () => {
   };
   return (
     <div className="absolute w-[380px] h-[580px] p-2 pb-3 bg-[url(E:\Coding\Js\React\calculator\src\assets\calcBg.jpg)] rounded-md border-[6px] border-[#805d2d]">
-      <div className="disp w-[98%] h-[90px] bg-[#e0d3c5] mt-2 mb-2 rounded border-[4.5px] border-[#805d2d] flex justify-end items-center text-[#805d2d] text-[35px] p-1">
+      <div className="disp w-[98%] h-[90px] bg-[#e0d3c5] mt-2 mb-2 rounded border-[4.5px] border-[#805d2d] flex justify-end items-center text-[#805d2d] text-[35px] p-1 overflow-hidden">
         {display}
       </div>
       <div className="grid grid-cols-4 gap-2 h-[435px]">
