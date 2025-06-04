@@ -53,8 +53,7 @@ const Calc = () => {
     return (
       <div className="but active:bg-[#b1926c] active:scale-95 shadow-md transition-transform duration-100">
         <button
-          className="text-[2.5vw] h-full w-full hover:bg-slate-950/5 rounded-md"
-          // onClick={OpClick}
+          className="h-full w-full text-[35px] hover:bg-slate-950/5 rounded-md"
           onClick={() => {
             CaclHandler(operator);
           }}
@@ -68,8 +67,7 @@ const Calc = () => {
     return (
       <div className="but-num active:bg-[#c4b3a1] active:scale-95 shadow-md transition-transform duration-100">
         <button
-          className="text-[2.5vw] h-full w-full hover:bg-slate-950/5 rounded-md"
-          // onClick={NumClick}
+          className="h-full w-full text-[35px] hover:bg-slate-950/5 rounded-md"
           onClick={() => {
             CaclHandler(number);
           }}
@@ -80,11 +78,11 @@ const Calc = () => {
     );
   };
   return (
-    <div className="absolute w-[30vw] h-100 p-2 pb-3 bg-[url(E:\Coding\Js\React\calculator\src\assets\calcBg.jpg)] rounded-md border-[0.7vw] border-[#805d2d]">
-      <div className="disp w-[98%] h-[8vw] bg-[#e0d3c5] mt-2 mb-2 rounded border-[0.7vw] border-[#805d2d] flex justify-end items-center text-[#805d2d] text-[2.5vw]">
+    <div className="absolute w-[380px] h-[580px] p-2 pb-3 bg-[url(E:\Coding\Js\React\calculator\src\assets\calcBg.jpg)] rounded-md border-[6px] border-[#805d2d]">
+      <div className="disp w-[98%] h-[90px] bg-[#e0d3c5] mt-2 mb-2 rounded border-[4.5px] border-[#805d2d] flex justify-end items-center text-[#805d2d] text-[35px] p-1">
         {display}
       </div>
-      <div className="grid grid-cols-4 gap-2">
+      <div className="grid grid-cols-4 gap-2 h-[435px]">
         <Key operator={"("} />
         <Key operator={")"} />
         <Key operator={"C"} />
@@ -102,20 +100,20 @@ const Calc = () => {
         <NumKey number={9} />
         <div className="but active:bg-[#b1926c] active:scale-95 shadow-md transition-transform duration-100">
           <button
-            className="text-[2.5vw] h-full w-full hover:bg-slate-950/5 rounded-md flex justify-center "
+            className="h-full w-full hover:bg-slate-950/5 rounded-md flex justify-center "
             onClick={() => CaclHandler("/")}
           >
-            <DivideIcon className="w-[2.5vw] h-[2.5vw] relative top-[1.4vw]" />
+            <DivideIcon className="w-[40px] h-[40px] relative top-[17px]" />
           </button>
         </div>
         <Key operator={"."} />
         <NumKey number={0} />
         <div className="but active:bg-[#b1926c] active:scale-95 shadow-md transition-transform duration-100">
           <button
-            className="text-[2.5vw] h-full w-full hover:bg-slate-950/5 rounded-md flex justify-center "
+            className="h-full w-full hover:bg-slate-950/5 rounded-md flex justify-center "
             onClick={() => CaclHandler("delete")}
           >
-            <BackspaceIcon className="w-[3vw] h-[3vw] relative top-[1vw]" />
+            <BackspaceIcon className="w-[40px] h-[40px] relative top-[17px]" />
           </button>
         </div>
         <Key operator={"="} />

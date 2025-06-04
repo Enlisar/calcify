@@ -3,25 +3,21 @@
 @tailwind utilities;
 
 .but {
-  height: 6vw;
-  width: 6vw;
   border-radius: 0.375rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #cfb391;
-  border: 0.5vw solid #805d2d;
+  border: 4.5px solid #805d2d;
   color: #805d2d;
 }
 
 .but-num {
-  height: 6vw;
-  width: 6vw;
   border-radius: 0.375rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #e0d3c5;
-  border: 0.5vw solid #805d2d;
+  border: 4.5px solid #805d2d;
   color: #805d2d;
 }
