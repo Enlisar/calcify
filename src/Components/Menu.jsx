@@ -1,10 +1,9 @@
 import { Bars3Icon } from "@heroicons/react/24/solid";
-import { FaCalculator } from "react-icons/fa";
-import { FaMoneyBillAlt } from "react-icons/fa";
-import { FaBalanceScale } from "react-icons/fa";
+import { FaCalculator, FaMoneyBillAlt, FaBalanceScale } from "react-icons/fa";
 import { MdDiscount } from "react-icons/md";
 import { LuTriangleRight } from "react-icons/lu";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Menu = () => {
   const [theme, setTheme] = useState("Wooden");
@@ -32,13 +31,13 @@ const Menu = () => {
             className="drawer-overlay"
           ></label>
           <ul className="menu [&_li>*:not(ul):not(.menu-title):not(details):active]:bg-[#654a24] bg-[#805d2d] z-50 shadow-md text-sm font-mono text-base-content min-h-full w-80 p-4">
-            <a href="#" className=" mb-4">
+            <NavLink to="/" className=" mb-4">
               <img
                 src="./src/assets/logo.png"
                 alt="logo"
                 className="h-[70px] w-[200px]"
               />
-            </a>
+            </NavLink>
             <div className="collapse collapse-arrow bg-[#805d2d]">
               <input type="checkbox" />
               <div className="collapse-title font-semibold">
@@ -80,34 +79,37 @@ const Menu = () => {
               </div>
             </div>
             <li>
-              <a href="#" className="hover:underline">
+              <NavLink to="/calculator" className="hover:underline">
                 <FaCalculator />
                 Calculator
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <NavLink to="/currency-converter" className="hover:underline">
                 <FaMoneyBillAlt />
                 Currency Converter
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <NavLink to="/unit-converter" className="hover:underline">
                 <FaBalanceScale />
                 Unit Converter
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <NavLink to="/discount-calculator" className="hover:underline">
                 <MdDiscount />
                 Discount Calculator
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <NavLink
+                to="/trigonometric-functions"
+                className="hover:underline"
+              >
                 <LuTriangleRight />
                 Trigonometric Functions
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
