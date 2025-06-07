@@ -66,7 +66,7 @@ const Calc = () => {
     );
   };
   return (
-    <div className="absolute w-[380px] h-[580px] p-2 pb-3 bg-[url(\src\assets\calcBg.jpg)] rounded-md border-[6px] border-[#805d2d]">
+    <div className="absolute w-[380px] h-[580px] p-2 pb-3 bg-[url(.\assets\CalcBg.jpg)] rounded-md border-[6px] border-[#805d2d]">
       <div className="disp w-[98%] h-[90px] bg-[#e0d3c5] mt-2 mb-2 rounded border-[4.5px] border-[#805d2d] flex justify-end items-center text-[#805d2d] text-[35px] p-1 overflow-hidden">
         {display}
       </div>
