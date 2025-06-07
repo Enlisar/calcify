@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import Calc from "./Pages/Calc.jsx";
 import Menu from "./Components/Menu.jsx";
@@ -13,7 +12,7 @@ const App = () => {
     {
       path: "/",
       element: (
-        <div className="h-[100vh] w-full flex justify-center items-center bg-cover bg-[url(E:\Coding\Js\React\calculator\src\assets\wood.jpg)]">
+        <div className="h-[100vh] w-full flex justify-center items-center bg-cover bg-[url(.\assets\wood.jpg)]">
           <Menu />
           <Calc />
         </div>
