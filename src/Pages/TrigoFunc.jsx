@@ -13,9 +13,10 @@ const TrigoFunc = () => {
 
   console.log(Math.PI);
   return (
-    <div className="absolute w-[600px] h-[400px] p-2 pb-3 bg-[#bc9060bb] rounded ">
-      <div className="text-black text-xl font-semibold text-center mb-7 flex ml-2 mt-7">
+    <div className="absolute sm:w-[600px] sm:h-[400px] p-2 pb-3 bg-[#bc9060bb] rounded w-[300px] h-[550px]">
+      <div className="text-black sm:text-xl text-lgfont-semibold text-center mb-7 flex ml-2 mt-7">
         <label htmlFor="anglebox">Enter the angle: </label>
+        <br />
         <input
           name="anglebox"
           type="text"
@@ -42,7 +43,7 @@ const TrigoFunc = () => {
           Go!
         </button>
       </div>
-      <div className="text-black text-xl font-semibold grid grid-cols-2 gap-8 sm:grid-cols-1">
+      <div className="text-black sm:text-xl text-lg font-semibold grid grid-cols-1 gap-8 sm:grid-cols-2">
         <div className="bg-[#bc8f60] p-1">sin: </div>
         <div className="bg-[#bc8f60] p-1">cos: </div>
         <div className="bg-[#bc8f60] p-1">tan: </div>
