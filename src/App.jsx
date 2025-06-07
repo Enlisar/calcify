@@ -12,7 +12,7 @@ const App = () => {
     {
       path: "/",
       element: (
-        <div className="h-[100vh] w-full flex justify-center items-center bg-cover bg-[url(calculator\src\assets\wood.jpg)]">
+        <div className="h-[100vh] w-full flex justify-center items-center bg-cover bg-[url(.\assets\wood.jpg)]">
           <Menu />
           <Calc />
         </div>
