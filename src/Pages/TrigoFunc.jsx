@@ -42,7 +42,7 @@ const TrigoFunc = () => {
           Go!
         </button>
       </div>
-      <div className="text-black text-xl font-semibold grid grid-cols-2 gap-8">
+      <div className="text-black text-xl font-semibold grid grid-cols-2 gap-8 sm:grid-cols-1">
         <div className="bg-[#bc8f60] p-1">sin: </div>
         <div className="bg-[#bc8f60] p-1">cos: </div>
         <div className="bg-[#bc8f60] p-1">tan: </div>
