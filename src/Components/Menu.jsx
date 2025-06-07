@@ -30,7 +30,7 @@ const Menu = () => {
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-          <ul className="menu [&_li>*:not(ul):not(.menu-title):not(details):active]:bg-[#654a24] bg-[#805d2d] z-50 shadow-md text-sm font-mono text-base-content min-h-full w-80 p-4">
+          <ul className="menu [&_li>*:not(ul):not(.menu-title):not(details):active]:bg-[#654a24] bg-[#805d2d] z-50 shadow-md text-sm font-mono text-white min-h-full w-80 p-4">
             <NavLink to="/" className=" mb-4">
               <img src="/logo.png" alt="logo" className="h-[70px] w-[200px]" />
             </NavLink>

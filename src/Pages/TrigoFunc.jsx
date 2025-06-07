@@ -1,7 +1,6 @@
 import { LuPi } from "react-icons/lu";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
-const calculate = () => {};
 const TrigoFunc = () => {
   const [type, setType] = useState("deg");
   const [angle, setAngle] = useState(0);
@@ -10,6 +9,9 @@ const TrigoFunc = () => {
     setDispangle((v) => v + "π");
     setAngle((a) => a + Math.PI);
   };
+  const calculate = () => {};
+  const anglevalue = useRef({ angle });
+  const angledispvalue = useRef({ dispangle });
 
   console.log(Math.PI);
   return (
