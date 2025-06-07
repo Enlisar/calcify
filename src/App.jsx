@@ -12,7 +12,7 @@ const App = () => {
     {
       path: "/",
       element: (
-        <div className="h-[100vh] w-full flex justify-center items-center bg-cover bg-[url(.\assets\wood.jpg)]">
+        <div className="h-[100vh] w-full flex justify-center items-center bg-cover bg-[url(src\assets\wood.jpg)]">
           <Menu />
           <Calc />
         </div>
@@ -21,7 +21,7 @@ const App = () => {
     {
       path: "/calculator",
       element: (
-        <div className="h-[100vh] w-full flex justify-center items-center bg-cover bg-[url(.\assets\wood.jpg)]">
+        <div className="h-[100vh] w-full flex justify-center items-center bg-cover bg-[url(src\assets\wood.jpg)]">
           <Menu />
           <Calc />
         </div>
@@ -30,7 +30,7 @@ const App = () => {
     {
       path: "/currency-converter",
       element: (
-        <div className="h-[100vh] w-full flex justify-center items-center bg-cover bg-[url(.\assets\wood.jpg)]">
+        <div className="h-[100vh] w-full flex justify-center items-center bg-cover bg-[url(src\assets\wood.jpg)]">
           <Menu />
           <Currency />
         </div>
@@ -39,7 +39,7 @@ const App = () => {
     {
       path: "/unit-converter",
       element: (
-        <div className="h-[100vh] w-full flex justify-center items-center bg-cover bg-[url.\assets\wood.jpg)]">
+        <div className="h-[100vh] w-full flex justify-center items-center bg-cover bg-[url(src\assets\wood.jpg)]">
           <Menu />
           <UnitConv />
         </div>
@@ -48,7 +48,7 @@ const App = () => {
     {
       path: "/discount-calculator",
       element: (
-        <div className="h-[100vh] w-full flex justify-center items-center bg-cover bg-[url(.\assets\wood.jpg)]">
+        <div className="h-[100vh] w-full flex justify-center items-center bg-cover bg-[url(src\assets\wood.jpg)]">
           <Menu />
           <DicountCalc />
         </div>
@@ -57,7 +57,7 @@ const App = () => {
     {
       path: "/trigonometric-functions",
       element: (
-        <div className="h-[100vh] w-full flex justify-center items-center bg-cover bg-[url(.\assets\wood.jpg)]">
+        <div className="h-[100vh] w-full flex justify-center items-center bg-cover bg-[url(src\assets\wood.jpg)]">
           <Menu />
           <TrigoFunc />
         </div>
