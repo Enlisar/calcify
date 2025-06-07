@@ -32,11 +32,7 @@ const Menu = () => {
           ></label>
           <ul className="menu [&_li>*:not(ul):not(.menu-title):not(details):active]:bg-[#654a24] bg-[#805d2d] z-50 shadow-md text-sm font-mono text-base-content min-h-full w-80 p-4">
             <NavLink to="/" className=" mb-4">
-              <img
-                src="src\assets\logo.png"
-                alt="logo"
-                className="h-[70px] w-[200px]"
-              />
+              <img src="/logo.png" alt="logo" className="h-[70px] w-[200px]" />
             </NavLink>
             <div className="collapse collapse-arrow bg-[#805d2d]">
               <input type="checkbox" />
