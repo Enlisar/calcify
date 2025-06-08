@@ -1,5 +1,5 @@
 import { LuPi } from "react-icons/lu";
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 const TrigoFunc = () => {
   const [angleUnit, setAngleUnit] = useState("rad");
