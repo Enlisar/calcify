@@ -86,39 +86,71 @@ const TrigoFunc = () => {
       <div className="text-black sm:text-xl text-lg font-semibold grid grid-cols-1 sm:gap-6 gap-3 px-1 sm:grid-cols-2">
         <div className="bg-[#bc8f60] rounded-md p-1 flex justify-between">
           sin: {results.sin}
-          <button onClick={() => navigator.clipboard.writeText(results.sin)}>
-            <FaRegCopy />
-          </button>
+          <div className="tooltip tooltip-bottom">
+            <div className="tooltip-content bg-[#eeba82d6]">
+              <div className=" text-black">Copy to clipboard</div>
+            </div>
+            <button onClick={() => navigator.clipboard.writeText(results.sin)}>
+              <FaRegCopy />
+            </button>
+          </div>
         </div>
         <div className="bg-[#bc8f60] rounded-md p-1 flex justify-between">
           cos: {results.cos}
-          <button onClick={() => navigator.clipboard.writeText(results.sin)}>
-            <FaRegCopy />
-          </button>
+          <div className="tooltip tooltip-bottom">
+            <div className="tooltip-content bg-[#eeba82d6]">
+              <div className=" text-black">Copy to clipboard</div>
+            </div>
+            <button onClick={() => navigator.clipboard.writeText(results.cos)}>
+              <FaRegCopy />
+            </button>
+          </div>
         </div>
         <div className="bg-[#bc8f60] rounded-md p-1 flex justify-between">
           tan: {results.tan}
-          <button onClick={() => navigator.clipboard.writeText(results.sin)}>
-            <FaRegCopy />
-          </button>
+          <div className="tooltip tooltip-bottom">
+            <div className="tooltip-content bg-[#eeba82d6]">
+              <div className=" text-black">Copy to clipboard</div>
+            </div>
+            <button onClick={() => navigator.clipboard.writeText(results.tan)}>
+              <FaRegCopy />
+            </button>
+          </div>
         </div>
         <div className="bg-[#bc8f60] rounded-md p-1 flex justify-between">
           cosec: {results.cosec}
-          <button onClick={() => navigator.clipboard.writeText(results.sin)}>
-            <FaRegCopy />
-          </button>
+          <div className="tooltip tooltip-bottom">
+            <div className="tooltip-content bg-[#eeba82d6]">
+              <div className=" text-black">Copy to clipboard</div>
+            </div>
+            <button
+              onClick={() => navigator.clipboard.writeText(results.cosec)}
+            >
+              <FaRegCopy />
+            </button>
+          </div>
         </div>
         <div className="bg-[#bc8f60] rounded-md p-1 flex justify-between">
           sec: {results.sec}
-          <button onClick={() => navigator.clipboard.writeText(results.sin)}>
-            <FaRegCopy />
-          </button>
+          <div className="tooltip tooltip-bottom">
+            <div className="tooltip-content bg-[#eeba82d6]">
+              <div className=" text-black">Copy to clipboard</div>
+            </div>
+            <button onClick={() => navigator.clipboard.writeText(results.sec)}>
+              <FaRegCopy />
+            </button>
+          </div>
         </div>
         <div className="bg-[#bc8f60] rounded-md p-1 flex justify-between">
           cot: {results.cot}
-          <button onClick={() => navigator.clipboard.writeText(results.sin)}>
-            <FaRegCopy />
-          </button>
+          <div className="tooltip tooltip-bottom">
+            <div className="tooltip-content bg-[#eeba82d6]">
+              <div className=" text-black">Copy to clipboard</div>
+            </div>
+            <button onClick={() => navigator.clipboard.writeText(results.cot)}>
+              <FaRegCopy />
+            </button>
+          </div>
         </div>
       </div>
     </div>
