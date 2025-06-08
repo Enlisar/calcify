@@ -61,7 +61,7 @@ const TrigoFunc = () => {
           name="anglebox"
           type="text"
           value={dispangle}
-          className="text-[#805d2d] bg-[#e0d3c5] border-2 border-[#805d2d] ml-2 rounded w-[50%]"
+          className="text-[#805d2d] bg-[#e0d3c5] border-2 border-[#805d2d] ml-2 rounded w-[50%] px-2"
           onChange={(e) => {
             setDispangle(e.target.value);
             setAngle(e.target.value);
