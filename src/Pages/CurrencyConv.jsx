@@ -1,7 +1,11 @@
 import React from "react";
 
 const Currency = () => {
-  return <p>Currency</p>;
+  return (
+    <>
+      <div>Currency Convertor</div>
+    </>
+  );
 };
 
 export default Currency;
