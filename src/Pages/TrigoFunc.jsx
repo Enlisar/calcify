@@ -49,16 +49,12 @@ const TrigoFunc = () => {
   }, [angle, angleUnit]);
 
   return (
-    <div className=" absolute w-[90%] max-w-[800px] p-4 bg-[#bc9060bb] rounded-lg shadow-xl mt-[-70px]">
-      <div className="text-black sm:text-xl text-lg font-semibold text-center flex flex-wrap justify-evenly mb-6 p-2">
-        <label
-          htmlFor="anglebox"
-          className="sm:text-[20px] text-[15px] sm:w-[143px] w-[800px] sm:ml-[0px] ml-[-180px]"
-        >
-          Enter the angle:
-        </label>
+    <div className=" absolute w-[90%] max-w-[800px] p-4 bg-[#bc9060bb] rounded-lg shadow-xl mt-[-70px] flex flex-col">
+      <div className="text-black font-semibold p-1">
+        <p className="text-[20px] sm:w-[143px] ]">Enter the angle:</p>
+      </div>
+      <div className="flex justify-center mb-5 p-1">
         <input
-          name="anglebox"
           type="text"
           value={dispangle}
           className="text-[#805d2d] bg-[#e0d3c5] border-2 border-[#805d2d] ml-2 rounded w-[50%] px-2"
