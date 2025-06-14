@@ -1,48 +1,70 @@
 const UnitConv = () => {
+  const lengthToMeter = {
+    nm: 1e-9,
+    um: 1e-6,
+    mm: 0.001,
+    cm: 0.01,
+    m: 1,
+    km: 1000,
+    in: 0.0254,
+    ft: 0.3048,
+    yd: 0.9144,
+    mi: 1609.34,
+  };
+
+  const conversion = () => {};
   return (
     <>
-      <div className="bg-[#bc9060bb] rounded-xl p-6 shadow-xl w-[90%] max-w-[500px] mx-auto absolute flex flex-col sm:flex-row gap-2 justify-center items-center ">
-        <div className="flex flex-col sm:w-1/2 w-full">
-          <input
-            type="text"
-            inputMode="numeric"
-            pattern="[0-9\s]{13,19}"
-            className="bg-[#8a6339] h-[40px] placeholder:text-[#e7c5a1] p-2 rounded"
-            placeholder="From"
-          />
-          <select className="bg-[#a87b4c] h-[35px] p-1 rounded hover:bg-[#b1824f]">
-            <option value="nanometre">Nanometre</option>
-            <option value="micrometre">Micrometre</option>
-            <option value="millimetre">Millimetre</option>
-            <option value="centimetre">Centimetre</option>
-            <option value="metre">Metre</option>
-            <option value="kilometre">Kilometre</option>
-            <option value="mile">Mile</option>
-            <option value="yard">Yard</option>
-            <option value="foot">Foot</option>
-            <option value="inch">Inch</option>
-          </select>
+      <div className="bg-[#bc9060bb] rounded-xl p-5 shadow-xl w-[90%] max-w-[500px] mx-auto absolute flex flex-col gap-2 justify-center items-center ">
+        <div className="text-2xl mb-2 text-[#805d2d] font-semibold">
+          Unit Converter
         </div>
-        <div className="flex flex-col sm:w-1/2 w-full">
-          <input
-            type="text"
-            inputMode="numeric"
-            pattern="[0-9\s]{13,19}"
-            className="bg-[#8a6339] h-[40px] placeholder:text-[#e7c5a1] p-2 rounded"
-            placeholder="To"
-          />
-          <select className="bg-[#a87b4c] h-[35px] p-1 rounded hover:bg-[#b1824f]">
-            <option value="nanometre">Nanometre</option>
-            <option value="micrometre">Micrometre</option>
-            <option value="millimetre">Millimetre</option>
-            <option value="centimetre">Centimetre</option>
-            <option value="metre">Metre</option>
-            <option value="kilometre">Kilometre</option>
-            <option value="mile">Mile</option>
-            <option value="yard">Yard</option>
-            <option value="foot">Foot</option>
-            <option value="inch">Inch</option>
-          </select>
+        <div className="w-[90%] max-w-[500px] mx-auto flex flex-col sm:flex-row gap-2 justify-center items-center">
+          <div className="flex flex-col sm:w-1/2 w-full">
+            <input
+              type="text"
+              inputMode="numeric"
+              pattern="[0-9\s]{13,19}"
+              className="bg-[#8a6339] h-[40px] placeholder:text-[#e7c5a1] p-2 rounded"
+              placeholder="From"
+              onChange={conversion}
+            />
+            <select
+              className="bg-[#a87b4c] h-[35px] p-1 rounded hover:bg-[#b1824f]"
+              onChange={conversion}
+            >
+              <option value="nm">Nanometre</option>
+              <option value="um">Micrometre</option>
+              <option value="mm">Millimetre</option>
+              <option value="cm">Centimetre</option>
+              <option value="m">Metre</option>
+              <option value="km">Kilometre</option>
+              <option value="mi">Mile</option>
+              <option value="yd">Yard</option>
+              <option value="ft">Foot</option>
+              <option value="in">Inch</option>
+            </select>
+          </div>
+          <div className="flex flex-col sm:w-1/2 w-full">
+            <div className="bg-[#8a6339] h-[40px] p-2 rounded text-[#e7c5a1]">
+              To
+            </div>
+            <select
+              className="bg-[#a87b4c] h-[35px] p-1 rounded hover:bg-[#b1824f]"
+              onChange={conversion}
+            >
+              <option value="nm">Nanometre</option>
+              <option value="um">Micrometre</option>
+              <option value="mm">Millimetre</option>
+              <option value="cm">Centimetre</option>
+              <option value="m">Metre</option>
+              <option value="km">Kilometre</option>
+              <option value="mi">Mile</option>
+              <option value="yd">Yard</option>
+              <option value="ft">Foot</option>
+              <option value="in">Inch</option>
+            </select>
+          </div>
         </div>
       </div>
     </>
