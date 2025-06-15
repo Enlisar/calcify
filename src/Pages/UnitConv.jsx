@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 const UnitConv = () => {
+  const [from, setFrom] = useState();
+  const [to, setTo] = useState();
   const lengthToMeter = {
     nm: 1e-9,
     um: 1e-6,
