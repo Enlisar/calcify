@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const UnitConv = () => {
-  const [from, setFrom] = useState();
-  const [to, setTo] = useState();
+  const [from, setFrom] = useState("m");
+  const [fromvalue, setFromvalue] = useState(0);
+  const [to, setTo] = useState("cm");
+  const [tovalue, setTovalue] = useState(0);
   const lengthToMeter = {
     nm: 1e-9,
     um: 1e-6,
@@ -15,8 +17,13 @@ const UnitConv = () => {
     yd: 0.9144,
     mi: 1609.34,
   };
+  const conversion = () => {
+    let a = fromvalue;
+    setTovalue((c) => fromvalue);
+  };
 
-  const conversion = () => {};
+  useEffect(conversion, [from, to, fromvalue]);
+
   return (
     <>
       <div className="bg-[#bc9060bb] rounded-xl p-5 shadow-xl w-[90%] max-w-[500px] mx-auto absolute flex flex-col gap-2 justify-center items-center ">
@@ -29,13 +36,15 @@ const UnitConv = () => {
               type="text"
               inputMode="numeric"
               pattern="[0-9\s]{13,19}"
-              className="bg-[#8a6339] h-[40px] placeholder:text-[#e7c5a1] p-2 rounded"
+              className="bg-[#8a6339] h-[40px] placeholder:text-[#e7c5a1] p-2 rounded text-[#e7c5a1]"
               placeholder="From"
-              onChange={conversion}
+              value={fromvalue}
+              onChange={(e) => setFromvalue(e.target.value)}
             />
             <select
               className="bg-[#a87b4c] h-[35px] p-1 rounded hover:bg-[#b1824f]"
-              onChange={conversion}
+              value={from}
+              onChange={(e) => setFrom(e.target.value)}
             >
               <option value="nm">Nanometre</option>
               <option value="um">Micrometre</option>
@@ -51,11 +60,12 @@ const UnitConv = () => {
           </div>
           <div className="flex flex-col sm:w-1/2 w-full">
             <div className="bg-[#8a6339] h-[40px] p-2 rounded text-[#e7c5a1]">
-              To
+              {tovalue}
             </div>
             <select
               className="bg-[#a87b4c] h-[35px] p-1 rounded hover:bg-[#b1824f]"
-              onChange={conversion}
+              value={to}
+              onChange={(e) => setTo(e.target.value)}
             >
               <option value="nm">Nanometre</option>
               <option value="um">Micrometre</option>
