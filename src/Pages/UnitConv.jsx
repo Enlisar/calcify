@@ -17,10 +17,7 @@ const UnitConv = () => {
     yd: 0.9144,
     mi: 1609.34,
   };
-  const conversion = () => {
-    let a = fromvalue;
-    setTovalue((c) => fromvalue);
-  };
+  const conversion = () => {};
 
   useEffect(conversion, [from, to, fromvalue]);
 
