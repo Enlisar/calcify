@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FaRegCopy } from "react-icons/fa";
 
 const UnitConv = () => {
   const [from, setFrom] = useState("m");
@@ -17,7 +18,11 @@ const UnitConv = () => {
     yd: 0.9144,
     mi: 1609.34,
   };
-  const conversion = () => {};
+
+  const conversion = () => {
+    let result = (fromvalue / lengthToMeter[from]) * lengthToMeter[to];
+    setTovalue((t) => result);
+  };
 
   useEffect(conversion, [from, to, fromvalue]);
 
@@ -56,8 +61,11 @@ const UnitConv = () => {
             </select>
           </div>
           <div className="flex flex-col sm:w-1/2 w-full">
-            <div className="bg-[#8a6339] h-[40px] p-2 rounded text-[#e7c5a1]">
+            <div className="bg-[#8a6339] h-[40px] p-2 rounded text-[#e7c5a1] flex justify-between overflow-x-auto">
               {tovalue}
+              <button onClick={() => navigator.clipboard.writeText(tovalue)}>
+                <FaRegCopy />
+              </button>
             </div>
             <select
               className="bg-[#a87b4c] h-[35px] p-1 rounded hover:bg-[#b1824f]"
