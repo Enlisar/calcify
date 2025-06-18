@@ -3,7 +3,9 @@ import React from "react";
 const Currency = () => {
   return (
     <>
-      <div>Currency Convertor</div>
+      <div className="bg-[#bc9060bb] rounded-xl p-6 shadow-xl w-[90%] max-w-[500px] mx-auto absolute text-center">
+        Currency Convertor - To be made
+      </div>
     </>
   );
 };
