@@ -10,9 +10,9 @@ const TrigoFunc = () => {
     sin: "0.00000",
     cos: "1.00000",
     tan: "0.00000",
-    cosec: "∞",
+    cosec: "-",
     sec: "1.00000",
-    cot: "∞",
+    cot: "-",
   });
 
   const EPSILON = 1e-5;
@@ -32,10 +32,10 @@ const TrigoFunc = () => {
     setResults({
       sin: sin.toFixed(5),
       cos: cos.toFixed(5),
-      tan: Math.abs(cos) < EPSILON ? "∞" : tan.toFixed(5),
-      cosec: Math.abs(sin) < EPSILON ? "∞" : (1 / sin).toFixed(5),
-      sec: Math.abs(cos) < EPSILON ? "∞" : (1 / cos).toFixed(5),
-      cot: Math.abs(tan) < EPSILON ? "∞" : (1 / tan).toFixed(5),
+      tan: Math.abs(cos) < EPSILON ? "-" : tan.toFixed(5),
+      cosec: Math.abs(sin) < EPSILON ? "-" : (1 / sin).toFixed(5),
+      sec: Math.abs(cos) < EPSILON ? "-" : (1 / cos).toFixed(5),
+      cot: Math.abs(tan) < EPSILON ? "-" : (1 / tan).toFixed(5),
     });
   };
 

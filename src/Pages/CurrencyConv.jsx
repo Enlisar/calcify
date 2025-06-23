@@ -1,6 +1,11 @@
-import React from "react";
-
+import { useState } from "react";
 const Currency = () => {
+  let [from, setFrom] = useState("USD");
+  let [fromval, setFromval] = useState();
+  let [to, setTo] = useState("INR");
+  let [toval, setToval] = useState();
+  console.log(fromval);
+  const calculate = () => {};
   return (
     <>
       <div className="bg-[#bc9060bb] rounded-xl p-5 shadow-xl w-[90%] max-w-[700px] mx-auto absolute flex flex-col gap-2 justify-center items-center ">
@@ -15,10 +20,13 @@ const Currency = () => {
               pattern="[0-9\s]{13,19}"
               className="bg-[#e2b88b] h-[40px] placeholder:text-[#8a6339] placeholder:font-medium p-2 rounded text-[#8a6339] w-full"
               placeholder="From"
+              value={fromval}
+              onChange={(e) => setFromval(e.target.value)}
             />
             <select
-              defaultValue="From"
               className="select w-[80px] bg-[#8a6339] text-[#e2b88b]"
+              value={from}
+              onChange={(e) => setFrom(e.target.value)}
             >
               <option disabled={true}>From</option>
               <option value="AUD">AUD</option>
@@ -50,21 +58,24 @@ const Currency = () => {
               <option value="SGD">SGD</option>
               <option value="THB">THB</option>
               <option value="TRY">TRY</option>
+              <option value="USD">USD</option>
               <option value="ZAR">ZAR</option>
             </select>
           </div>
           <div className="flex flex-row">
-            {/* <input
+            <input
               type="text"
               inputMode="numeric"
               pattern="[0-9\s]{13,19}"
               className="bg-[#e2b88b] h-[40px] placeholder:text-[#8a6339] placeholder:font-medium p-2 rounded text-[#8a6339] w-full"
               placeholder="To"
-            /> */}
-            <div></div>
+              readOnly="readonly"
+              value={toval}
+            />
             <select
-              defaultValue="To"
               className="select w-[80px] bg-[#8a6339] text-[#e2b88b]"
+              value={to}
+              onChange={(e) => setTo(e.target.value)}
             >
               <option disabled={true}>To</option>
               <option value="AUD">AUD</option>
@@ -96,9 +107,18 @@ const Currency = () => {
               <option value="SGD">SGD</option>
               <option value="THB">THB</option>
               <option value="TRY">TRY</option>
+              <option value="USD">USD</option>
               <option value="ZAR">ZAR</option>
             </select>
           </div>
+        </div>
+        <div>
+          <button
+            className="bg-[#805d2d] p-3 rounded-lg mt-4 hover:bg-[#9e7439] active:bg-[#5f4522] transition duration-[600] text-[#e2b88b]"
+            onClick={calculate}
+          >
+            Calculate
+          </button>
         </div>
       </div>
     </>
