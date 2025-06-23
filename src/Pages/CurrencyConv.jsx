@@ -13,10 +13,13 @@ const Currency = () => {
               type="text"
               inputMode="numeric"
               pattern="[0-9\s]{13,19}"
-              className="bg-[#8a6339] h-[40px] placeholder:text-[#e7c5a1] p-2 rounded text-[#e7c5a1] w-auto"
+              className="bg-[#e2b88b] h-[40px] placeholder:text-[#8a6339] placeholder:font-medium p-2 rounded text-[#8a6339] w-full"
               placeholder="From"
             />
-            <select defaultValue="From" className="select w-[80px]">
+            <select
+              defaultValue="From"
+              className="select w-[80px] bg-[#8a6339] text-[#e2b88b]"
+            >
               <option disabled={true}>From</option>
               <option value="AUD">AUD</option>
               <option value="BGN">BGN</option>
@@ -51,14 +54,18 @@ const Currency = () => {
             </select>
           </div>
           <div className="flex flex-row">
-            <input
+            {/* <input
               type="text"
               inputMode="numeric"
               pattern="[0-9\s]{13,19}"
-              className="bg-[#8a6339] h-[40px] placeholder:text-[#e7c5a1] p-2 rounded text-[#e7c5a1] w-auto"
+              className="bg-[#e2b88b] h-[40px] placeholder:text-[#8a6339] placeholder:font-medium p-2 rounded text-[#8a6339] w-full"
               placeholder="To"
-            />
-            <select defaultValue="To" className="select w-[80px]">
+            /> */}
+            <div></div>
+            <select
+              defaultValue="To"
+              className="select w-[80px] bg-[#8a6339] text-[#e2b88b]"
+            >
               <option disabled={true}>To</option>
               <option value="AUD">AUD</option>
               <option value="BGN">BGN</option>
