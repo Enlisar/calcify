@@ -4,8 +4,15 @@ const Currency = () => {
   let [fromval, setFromval] = useState();
   let [to, setTo] = useState("INR");
   let [toval, setToval] = useState();
-  console.log(fromval);
-  const calculate = () => {};
+
+  const calculate = () => {
+    fetch(`https://api.frankfurter.dev/v1/latest?base=${from}&symbols=${to}`)
+      .then((resp) => resp.json())
+      .then((data) => {
+        const convertedAmount = (fromval * data.rates[to]).toFixed(2);
+        setToval(convertedAmount);
+      });
+  };
   return (
     <>
       <div className="bg-[#bc9060bb] rounded-xl p-5 shadow-xl w-[90%] max-w-[700px] mx-auto absolute flex flex-col gap-2 justify-center items-center ">
@@ -28,7 +35,6 @@ const Currency = () => {
               value={from}
               onChange={(e) => setFrom(e.target.value)}
             >
-              <option disabled={true}>From</option>
               <option value="AUD">AUD</option>
               <option value="BGN">BGN</option>
               <option value="BRL">BRL</option>
@@ -77,7 +83,6 @@ const Currency = () => {
               value={to}
               onChange={(e) => setTo(e.target.value)}
             >
-              <option disabled={true}>To</option>
               <option value="AUD">AUD</option>
               <option value="BGN">BGN</option>
               <option value="BRL">BRL</option>

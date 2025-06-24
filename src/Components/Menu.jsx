@@ -6,12 +6,6 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Menu = () => {
-  const [theme, setTheme] = useState("Wooden");
-
-  const themeSelector = (eve) => {
-    let currentTheme = eve.target.value;
-    setTheme(currentTheme);
-  };
   return (
     <div className="h-20 ml-2 w-full bg-none relative self-start text-left p-2">
       <div className="drawer drawer-auto-gutter hover:cursor-default">
@@ -34,48 +28,8 @@ const Menu = () => {
             <NavLink to="/" className=" mb-4">
               <img src="/logo.png" alt="logo" className="h-[70px] w-[200px]" />
             </NavLink>
-            <div className="collapse collapse-arrow bg-[#805d2d]">
-              <input type="checkbox" />
-              <div className="collapse-title font-semibold">
-                <p>Theme: {theme}</p>
-              </div>
-              <div className="collapse-content text-sm">
-                <fieldset className="fieldset">
-                  <label className="flex gap-2 cursor-pointer items-center">
-                    <input
-                      type="radio"
-                      name="theme-radios"
-                      className="radio radio-sm theme-controller"
-                      value="Wooden"
-                      onClick={(e) => themeSelector(e)}
-                    />
-                    Wooden
-                  </label>
-                  <label className="flex gap-2 cursor-pointer items-center">
-                    <input
-                      type="radio"
-                      name="theme-radios"
-                      className="radio radio-sm theme-controller"
-                      value="Light"
-                      onClick={(e) => themeSelector(e)}
-                    />
-                    Light
-                  </label>
-                  <label className="flex gap-2 cursor-pointer items-center">
-                    <input
-                      type="radio"
-                      name="theme-radios"
-                      className="radio radio-sm theme-controller"
-                      value="Dark"
-                      onClick={(e) => themeSelector(e)}
-                    />
-                    Dark
-                  </label>
-                </fieldset>
-              </div>
-            </div>
             <li>
-              <NavLink to="/calculator" className="hover:underline">
+              <NavLink to="/calculator" className="hover:underline mt-4">
                 <FaCalculator />
                 Calculator
               </NavLink>
