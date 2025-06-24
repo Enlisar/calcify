@@ -2,7 +2,6 @@ import { Bars3Icon } from "@heroicons/react/24/solid";
 import { FaCalculator, FaMoneyBillAlt, FaBalanceScale } from "react-icons/fa";
 import { MdDiscount } from "react-icons/md";
 import { LuTriangleRight } from "react-icons/lu";
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Menu = () => {
