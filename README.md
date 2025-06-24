@@ -1,25 +1,35 @@
-Calcify – Multi Calculator App
+# Calcify – All-in-One Calculator Web App
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-0F172A?style=for-the-badge&logo=tailwind-css&logoColor=38BDF8)
+**Calcify** is a multi-functional, responsive web application built using **React**, **Tailwind CSS**, **DaisyUI**, and **Vite**.  
+It includes a variety of calculators and converters designed with speed, simplicity, and aesthetics in mind.
 
-Calcify is a basic calculator app built using React and Tailwind CSS.
-It’s my first project using React, as well as my first time working with Tailwind CSS.
+> This is my first complete React + Tailwind project. I'm proud of the result!
 
-🔧 Tech Stack
+---
 
-- ⚛️ React
-- 🎨 Tailwind CSS
-- 🔔 Heroicons
-- 🌼 Daisy UI
+## Features
 
-✨ Features
+- Basic Calculator – Clean design with animations and smart input handling
+- Trigonometric Calculator – Supports Degree & Radian with π input
+- Discount Calculator – Quickly calculate savings and final price
+- Unit Converter – Convert between nm, µm, mm, cm, m, km, in, ft, yd, mi
+- Currency Converter – Real-time exchange rates using [Frankfurter API](https://frankfurter.app)
 
-- Basic calculator layout
-- Responsive design
-- Smooth button animations on click
-- Clean and aesthetic interface
-- Different amazing features
+---
 
-This project is part of my learning journey in web development.
-I’ll continue to expand Calcify with more tools and functionality as I learn and grow.
+## Built With
+
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [DaisyUI](https://daisyui.com/)
+- [Heroicons](https://heroicons.com/)
+- [Frankfurter API](https://frankfurter.app/) (for currency exchange)
+
+---
+
+## Live Demo
+
+[https://calcify-rho.vercel.app](https://calcify-rho.vercel.app)
+
+---
