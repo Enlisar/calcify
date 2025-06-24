@@ -3,7 +3,7 @@
 **Calcify** is a multi-functional, responsive web application built using **React**, **Tailwind CSS**, **DaisyUI**, and **Vite**.  
 It includes a variety of calculators and converters designed with speed, simplicity, and aesthetics in mind.
 
-> This is my first complete React + Tailwind project. I'm proud of the result!
+> This is my first complete React + Tailwind project.
 
 ---
 
@@ -24,7 +24,7 @@ It includes a variety of calculators and converters designed with speed, simplic
 - [Tailwind CSS](https://tailwindcss.com/)
 - [DaisyUI](https://daisyui.com/)
 - [Heroicons](https://heroicons.com/)
-- [Frankfurter API](https://frankfurter.app/) (for currency exchange)
+- [Frankfurter API](https://frankfurter.app/)
 
 ---
 
