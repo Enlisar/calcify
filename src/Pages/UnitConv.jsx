@@ -20,7 +20,7 @@ const UnitConv = () => {
   };
 
   const conversion = () => {
-    let result = (fromvalue / lengthToMeter[from]) * lengthToMeter[to];
+    let result = (fromvalue / lengthToMeter[to]) * lengthToMeter[from];
     setTovalue((t) => result);
   };
 

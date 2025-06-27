@@ -5,7 +5,14 @@ import { evaluate } from "mathjs";
 
 const Calc = () => {
   const [display, setDisplay] = useState(" ");
+  const [justEvaluated, setJustEvaluated] = useState(false);
+
   const CaclHandler = (value) => {
+    if (justEvaluated && value !== "=" && value !== "delete" && value !== "C") {
+      setDisplay(value.toString());
+      setJustEvaluated(false);
+      return;
+    }
     if (Number.isInteger(value) && display.endsWith(")") == false) {
       setDisplay((d) => d + value);
     } else if (
@@ -35,6 +42,7 @@ const Calc = () => {
     } else if (value == "=") {
       let result = evaluate(display);
       setDisplay(result.toString());
+      setJustEvaluated(true);
     }
   };
   const Key = ({ operator }) => {
